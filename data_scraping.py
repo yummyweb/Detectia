@@ -10,7 +10,7 @@ from warnings import warn
 import numpy as np
 import pandas as pd
 
-pages = 50
+pages = 5
 
 statement = []
 link = []
