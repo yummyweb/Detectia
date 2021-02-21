@@ -1,52 +1,33 @@
-# Packages for Web-Scraping
-from requests import get
-from bs4 import BeautifulSoup
-from time import time
-from time import sleep
-from random import randint
-from warnings import warn
+import nn
 
-# Packages for Saving File after Scraping
-import numpy as np
-import pandas as pd
+a = nn.searchnet('Truth.db')
 
-pages = 5
+a.train('I did not have sexual relations with that woman, Miss Kravinsky.', 0)
+print("Training...")
 
-statement = []
-link = []
-veracity = []
+a.train('I do not believe in god as he is who never was.', 0)
+print("Training...")
 
-for i in range(0, pages):
-    response = get(f'https://www.politifact.com/factchecks/list/?page={i}&category=truth-o-meter')
+a.train("I didn't see him go, I promise.", 1)
+print("Training...")
 
-    # Sleep, so IP address does not get banned
-    sleep(randint(8,15))
+a.train('He went in and kissed her ass off.', 1)
+print("Training...")
 
-    if response.status_code != 200:
-        warn('Request: {}; Status code: {}'.format(i, response.status_code))
+a.train('I am very sorry for your loss, Johnny was like a brother to me.', 1)
+print("Training...")
 
-    html_soup = BeautifulSoup(response.text, 'html.parser')
-    type(html_soup)
+a.train('Did you say something, mister Greene. Because, well I am sorry for saying this but you can go shit your idea.', 1)
+print("Training...")
 
-    statement_containers = html_soup.find_all('div', class_ = 'm-statement__content')
+a.train('In all candor, I did not do that murder. This is my plea, not guilty.', 0)
+print("Training...")
 
-    # Extract data from individual container
-    for container in statement_containers:
-        sta = container.find('a').get_text(strip=True)
-        statement.append(sta)
+a.train('Honestly, I am very nice and so good and kind. You all should learn a thing or two from me.', 0)
+print("Training...")
 
-        lin = container.find('a')["href"]
-        link.append(lin)
+a.train("That seems right now, don't it!", 1)
+print("Training...")
 
-        ver = container.find('img')
-
-        if ver == None: break
-
-        veracity.append(ver['alt'])
-
-dataset = pd.DataFrame(
-    {'statement': statement,
-    'link': link,
-    'veracity': veracity
-})
-dataset.to_csv('dataset.csv')
+a.train("I'd know the truth", 1)
+print("Training...")

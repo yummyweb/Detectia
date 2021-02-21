@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "evogria";
+  src: url("evogria-webfont.woff");
+}
+textarea {
+  font-family: "evogria";
+  border: 5px solid white;
+  margin-top: 13%;
+
+  background: transparent;
+  color: white;
+}
+
+button {
+  border-radius: 50px;
+  font-size: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: pink;
+  font-family: "evogria";
+  margin-top: 4%;
+
+  color: black;
+  border: 1px solid pink;
+}
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.truth {
+  margin-left: 110px;
+}
+.new {
+  margin-left: 185px;
+}
+::placeholder {
+  text-align: center;
+  font-size: 30px;
+  color: grey;
+}
+body {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ_jOeSL_8SqgxEfQC6YTplSPlHtJuuXLyNA&usqp=CAU);
+  background-size: 1200px 800px;
+}
+.main {
+  margin: auto;
+  width: 50%;
+}

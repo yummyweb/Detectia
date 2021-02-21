@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "evogria";
+  src: url("/static/evogria-webfont.woff");
+}
+@font-face {
+  font-family: "heavitasregular";
+  src: url("/static/heavitas-webfont.woff2") format("woff2");
+}
+
+.heading {
+  font-size: 160px;
+  text-align: center;
+  margin-top: 11%;
+  font-family: "heavitasregular";
+}
+
+.tagline {
+  font-size: 60px;
+  text-align: center;
+  font-family: "evogria";
+  margin-top: -2%;
+}
+button {
+  border-radius: 50px;
+  font-size: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: pink;
+  font-family: "evogria";
+  margin: auto;
+  display: block;
+  color: black;
+  border: 1px solid pink;
+}
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+body {
+  background-image: url(https://i.pinimg.com/originals/da/42/64/da4264a33bbcfcd56d3cb80e26430518.png);
+}
