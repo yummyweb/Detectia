@@ -1,6 +1,6 @@
 @font-face {
   font-family: "evogria";
-  src: url("evogria-webfont.woff");
+  src: url("/static/vogria-webfont.woff");
 }
 textarea {
   font-family: "evogria";
@@ -28,6 +28,7 @@ button:hover {
   color: white;
   cursor: pointer;
   transition: 0.4s ease;
+  outline: none;
 }
 .truth {
   margin-left: 110px;
@@ -41,9 +42,11 @@ button:hover {
   color: grey;
 }
 body {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ_jOeSL_8SqgxEfQC6YTplSPlHtJuuXLyNA&usqp=CAU);
-  background-size: 1200px 800px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
+
 .main {
   margin: auto;
   width: 50%;
