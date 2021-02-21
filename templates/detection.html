@@ -1,0 +1,13 @@
+<html>
+    <head><link rel="stylesheet" href="{{ url_for('static', filename = 'detection.css') }}"></head>
+    <body>
+        <div class="result">
+            
+            {% if truthOrLie == 'Truth' %}
+                <span>You are honest,</span> <br>  Truth percentage <span> 75%</span>
+            {% else %}
+                <span>You are lying,</span> <br>  Lie percentage <span> 90%</span>    
+            {% endif %}
+        </div>
+    </body>
+</html>

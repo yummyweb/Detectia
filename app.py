@@ -14,9 +14,9 @@ def result():
         res = a.getresult(request.form['statement']) 
         
         if res[0] > res[1]:
-            return "Lie Bitch"
+            return render_template('detection.html', truthOrLie='Lie') 
         else:
-            return "True Heavens"
+            return render_template('detection.html', truthOrLie='Truth')
     
     else:
         return render_template("detect.html")
