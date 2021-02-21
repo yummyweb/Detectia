@@ -31,3 +31,12 @@ print("Training...")
 
 a.train("I'd know the truth", 1)
 print("Training...")
+
+a.train('Honestly, I am very nice and so good and kind. You all should learn a thing or two from me.', 0)
+print("Training...")
+
+a.train("We will win, I promise you this much.", 0)
+print("Training...")
+
+a.train("I didn't throw my own phone in the pool, mom.", 1)
+print("Training...")
